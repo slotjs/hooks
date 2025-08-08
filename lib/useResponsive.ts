@@ -10,7 +10,7 @@ import { useEffect, useState } from "react";
  * @param baseFontSize 
  * @example
  * ```ts
- * const isReady = useRootFontSize(1920, 16);
+ * const isReady = useResponsive(1920, 16);
  * ```
  * // This will set the root font size based on a base width of 1920px
  * // and a base font size of 16px.
@@ -18,7 +18,7 @@ import { useEffect, useState } from "react";
  * // with the appropriate font size.
  * @returns 
  */
-export function useRootFontSize(baseWidth = 1920, baseFontSize = 16): boolean {
+export function useResponsive(baseWidth = 1920, baseFontSize = 16): boolean {
   const [isReady, setIsReady] = useState(false);
 
   const updateRootFontSize = () => {

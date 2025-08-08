@@ -9,7 +9,7 @@ export default defineConfig({
       entry: ["lib/index.js"],
       name: "@slotjs/hooks",
       formats: ["es", "umd"],
-      fileName: (format, entryName) => `@slotjs/hooks-${entryName}.${format}.js`,
+      fileName: (format, entryName) => `${entryName}.${format}.js`,
     },
     rollupOptions: {
       external: ["react", "react-dom"],
@@ -20,5 +20,11 @@ export default defineConfig({
         },
       },
     },
+  },
+  test: {
+    globals: true,
+    environment: 'jsdom',
+    setupFiles: './src/setupTests.ts',
+    css: true,
   },
 });

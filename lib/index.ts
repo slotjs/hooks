@@ -1,1 +1,1 @@
-export * from './useRootFontSize';
+export * from './useResponsive';

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { useRootFontSize } from "../lib/useRootFontSize";
+import { useResponsive } from "../lib/useResponsive";
 import "./App.css";
 
 const FullScreenWrapper = styled.div`
@@ -19,7 +19,7 @@ const ContentContainer = styled(FullScreenWrapper)`
 `;
 
 function App() {
-  const isReady = useRootFontSize();
+  const isReady = useResponsive();
 
   return isReady ? (
     <ContentContainer>@slotjs</ContentContainer>
